@@ -1,0 +1,53 @@
+/* spacing variables */
+:root {
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 40px;
+  --space-8: 48px;
+  --space-9: 64px;
+}
+
+/* reset spacing */
+h1, h2, h3, h4, h5, h6, p
+, .display-0, .display-1, .display-2 {
+  margin: 0;
+  line-height: 1.125;
+}
+
+/* layout */
+.flow > * + * {
+  margin-top: var(--space-4);
+}
+
+.no-flow {
+  margin-top: 0 !important;
+}
+
+/* heading and paragraph bottom spacing overrides */
+h1 { margin-bottom: var(--space-4); }
+h2 { margin-bottom: var(--space-3); }
+h3, h4, h5, h6 { margin-bottom: var(--space-2); }
+p { margin-bottom: var(--space-1); }
+
+/* display utility spacing */
+.display-0 { margin-bottom: var(--space-6); }
+.display-1 { margin-bottom: var(--space-5); }
+.display-2 { margin-bottom: var(--space-4); }
+
+/* optional spacing helpers for fine control */
+.mt-0 { margin-top: var(--space-0); }
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mt-4 { margin-top: var(--space-4); }
+
+.mb-0 { margin-bottom: var(--space-0); }
+.mb-1 { margin-bottom: var(--space-1); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+.mb-4 { margin-bottom: var(--space-4); }
