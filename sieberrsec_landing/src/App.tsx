@@ -63,23 +63,23 @@ export default function App(){
     </>
   )
 }
+function NavBar({ scrollTo }: navProps) {
+  const [open, setOpen] = React.useState(false)
 
-type navProps = {
-  scrollTo: (x: string) => void
-}
 
-function NavBar({scrollTo}: navProps){
+
   return (
-  <nav>
-    <ol>
-      <li onClick={() => scrollTo("hero")}><img src={logo} alt="" /></li>
-      <li onClick={() => scrollTo("about")}>About</li>
-      <li onClick={() => scrollTo("prizes")}>Prizes</li>
-      <li onClick={() => scrollTo("timeline")}>Timeline</li>
-      <li onClick={() => scrollTo("sponsors")}>Sponsors</li>
-      <li onClick={() => scrollTo("contact")}>contact</li>
-    </ol>
-  </nav>
+    <nav className="nav">
+      <div className="nav-logo" onClick={() => scrollTo("hero")}>
+        <img src={logo} alt="logo" />
+      </div>
+      <ol className={"nav-links"}>
+        <li onClick={() => scrollTo("about")}>About</li>
+        <li onClick={() => scrollTo("prizes")}>Prizes</li>
+        <li onClick={() => scrollTo("timeline")}>Timeline</li>
+        <li onClick={() => scrollTo("sponsors")}>Sponsors</li>
+        <li onClick={() => scrollTo("contact")}>Contact</li>
+      </ol>
+    </nav>
   )
 }
-

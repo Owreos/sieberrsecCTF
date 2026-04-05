@@ -42,9 +42,9 @@ export default function Prizes({sectionref}:sectionProps){
 
             <div className="all-finalists">
                 <h2>All Finalists</h2>
-                <p>Kitty Plush</p>
+                <p>Sieberrsec Limited Plush</p>
                 <p>Sieberrsec T-shirt</p>
-                <p>Tote bag</p>
+                <p>Sieberrsec Tote bag</p>
             </div>
         </section>
     )

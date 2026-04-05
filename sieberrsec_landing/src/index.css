@@ -208,6 +208,7 @@ p {
 
 .small {
   color: #B8E0D1;
+  text-align: left
 }
 /* weightmaxxing */
 
@@ -275,6 +276,20 @@ p {
   text-shadow: 0px 1px 2px #5286e0;
 }
 
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 40px;
+  cursor: pointer;
+  margin-left: var(--space-5);
+}
+
+
 ol {
   display: flex;
   flex-direction: row;
@@ -287,8 +302,16 @@ li {
   cursor: pointer;
 }
 
-li > img {
-  height: 40px;
+@media (max-width: 700px) {
+  .nav-links {
+    display: none;
+  }
+  .top-bar {
+    padding-top: var(--space-2);
+  }
+  .nav-logo img {
+    height: 50px;
+  }
 }
 
 /* hero */
@@ -512,6 +535,8 @@ li > img {
   width: 100%;
 }
 
+
+
 /* Sponsors */
 .sponsors {
   display: flex;
@@ -526,6 +551,7 @@ li > img {
   flex-direction: row;
   gap: var(--space-5);
   align-items: center;
+  justify-content: center;
 }
 
 .csit-segment p {
