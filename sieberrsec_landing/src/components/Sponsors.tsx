@@ -13,6 +13,7 @@ export default function Sponsors({sectionref}:sectionProps){
     return(
         <section className="sponsors section flow" ref={sectionref}>
             <h1>Sponsors</h1>
+            <p className="sponsor-note">(Do note that the list of sponsors is still being finalized.)</p>
             <h2>Exclusive Sponsor</h2>
             <div className="csit-segment">
                 <img src={csit} alt="" className="csit-logo" style={{height: "150px"}}/>

@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./sieberrsec_landing/src:/app/sieberrsec_landing/src
+      - ./sieberrsec_landing/public:/app/sieberrsec_landing/public
+      - ./sieberrsec_landing/index.html:/app/sieberrsec_landing/index.html

@@ -41,10 +41,10 @@ export default function Prizes({sectionref}:sectionProps){
             </div>
 
             <div className="all-finalists">
-                <h2>All Finalists</h2>
+                <h2>All Finalists (top 120 players!)</h2>
                 <p>Sieberrsec Limited Plush</p>
                 <p>Sieberrsec T-shirt</p>
-                <p>Sieberrsec Tote bag</p>
+                <p>Sponsor Merch</p>
             </div>
         </section>
     )
@@ -61,6 +61,6 @@ function PrizeNode({title, price, icon}: PrizeNodeProps){
     <div className="prize-container no-flow">
         {icon && <img className="place-icon" src={icon} alt="" />}
         <div className="prize-title w500">{title}</div>
-        <p>{price}</p>
+        <p className="prize-amount">{price}</p>
     </div>)
 }

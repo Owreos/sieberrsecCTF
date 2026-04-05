@@ -16,7 +16,7 @@ export default function Join({sectionref}:sectionProps){
                 <p>Subscribe to our official channels</p>
                 <div className="links-container">
                     <a href="https://discord.gg/fdf7JnXpxy" target="_blank"><div className="link-btn discord"><span><img src={discord}></img></span><p>Discord</p></div></a>
-                    <a href="" target="_blank"><div className="link-btn insta"><span><img src={instagram}></img></span><p>Instagram</p></div></a>
+                    <a href="https://instagram.com/sieberr.live" target="_blank"><div className="link-btn insta"><span><img src={instagram}></img></span><p>Instagram</p></div></a>
                 </div>
 
                 <div className="body-3 mailing">Questions? Reach us at <a href="mailto:sieberrsecctf@gmail.com"> sieberrsecctf@gmail.com </a></div>
