@@ -17,12 +17,12 @@ export default function Prizes({sectionref}:sectionProps){
             <div className="cat-container pre-u">
                 <div className="prize-card">
                     <h2>Pre-Uni</h2>
-                    <PrizeNode title="First place" price={"unoprice"} icon={first}/>
-                    <PrizeNode title="Second place" price={"unoprice"} icon={second}/>
-                    <PrizeNode title="Third place" price={"unoprice"} icon={third}/>
+                    <PrizeNode title="First place" price={"$2000"} icon={first}/>
+                    <PrizeNode title="Second place" price={"$1200"} icon={second}/>
+                    <PrizeNode title="Third place" price={"$800"} icon={third}/>
                     <h3>Runner Ups</h3>
-                    <PrizeNode title="Fourth place" price={"unoprice"}/>
-                    <PrizeNode title="Fifth place" price={"unoprice"}/>
+                    <PrizeNode title="Fourth place" price={"$600"}/>
+                    <PrizeNode title="Fifth place" price={"$500"}/>
                 </div>
                 <img className="prize-mascot" src={bigKitty} alt="" />
             </div>
@@ -30,18 +30,21 @@ export default function Prizes({sectionref}:sectionProps){
             <div className="cat-container secondary">
                 <div className="prize-card">
                     <h2>Secondary</h2>
-                    <PrizeNode title="First place" price={"unoprice"} icon={first}/>
-                    <PrizeNode title="Second place" price={"unoprice"} icon={second}/>
-                    <PrizeNode title="Third place" price={"unoprice"} icon={third}/>
+                    <PrizeNode title="First place" price={"$1000"} icon={first}/>
+                    <PrizeNode title="Second place" price={"$600"} icon={second}/>
+                    <PrizeNode title="Third place" price={"$400"} icon={third}/>
+                    <h3>Runner Ups</h3>
+                    <PrizeNode title="Fourth place" price={"$300"}/>
+                    <PrizeNode title="Fifth place" price={"$250"}/>
                 </div>
                 <img className="prize-mascot" src={smallKitty} alt="" />
             </div>
 
             <div className="all-finalists">
                 <h2>All Finalists</h2>
-                <p>A Limited Kitty Plush</p>
-                <p>Sieberrsec Tshit</p>
-                <p>last years sctf winner prizes, split equally</p>
+                <p>Kitty Plush</p>
+                <p>Sieberrsec T-shirt</p>
+                <p>Tote bag</p>
             </div>
         </section>
     )

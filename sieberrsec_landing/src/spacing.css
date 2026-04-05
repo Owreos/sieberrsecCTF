@@ -13,15 +13,19 @@
 }
 
 /* reset spacing */
-h1, h2, h3, h4, h5, h6, p
+h1, h2, h3, h4, h5, h6
 , .display-0, .display-1, .display-2 {
   margin: 0;
   line-height: 1.125;
 }
 
+p {
+  margin: 0;
+  line-height: 1.5;
+}
 /* layout */
 .flow > * + * {
-  margin-top: var(--space-4);
+  margin-top: var(--space-5);
 }
 
 .no-flow {

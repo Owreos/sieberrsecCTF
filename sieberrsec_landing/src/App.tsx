@@ -7,13 +7,14 @@ import Join from "./components/Join"
 import logo from "./assets/artwork/sieberr_logo.PNG"
 import React from "react"
 import { useRef } from "react"
+import { animated, useScroll } from "@react-spring/web"
 export default function App(){
   const HeroRef = useRef<HTMLDivElement>(null)
   const AboutRef = useRef<HTMLDivElement>(null)
   const PrizeRef = useRef<HTMLDivElement>(null)
   const TimelineRef = useRef<HTMLDivElement>(null)
   const SponsorRef = useRef<HTMLDivElement>(null)
-  const JoinRef = useRef<HTMLDivElement>(null)
+  const ContactRef = useRef<HTMLDivElement>(null)
   
   const scrollTo = (section: string) => {
     console.log("scrolling to" + section)
@@ -23,7 +24,7 @@ export default function App(){
       "prizes": PrizeRef,
       "timeline": TimelineRef,
       "sponsors": SponsorRef,
-      "join": JoinRef
+      "contact": ContactRef
     }
 
     map[section]?.current?.scrollIntoView({
@@ -31,24 +32,33 @@ export default function App(){
     })
   }
 
+  const { scrollY } = useScroll();
+  const bgOpacity = scrollY.to([0, 300], [0, 0.9]);
+  const bg = bgOpacity.to(
+  (v) =>
+    `linear-gradient(
+      to bottom,
+      rgba(14,28,51,${v}),
+      rgba(14,28,51,0)
+    )`
+  );
   return(
     <>
-      <div className="top-bar">
+      <animated.div
+        className="top-bar"
+        style={{backgroundImage: bg}}>
         <NavBar scrollTo={scrollTo}/>
-        <div className="miscOptions">
-          <span>day and night</span>
-          <span>light and dark mode</span>
-          <span>accessibility</span>
-          <span>archive</span>
+        <div className="signup-btn">
+          <a href="Somejoin" target="_blank">Sign up</a>
         </div>
-      </div>
+      </animated.div>
       <Hero sectionref={HeroRef}/>
       <About sectionref={AboutRef}/>
       {/* <div className="content-transition"></div> */}
       <Prizes sectionref={PrizeRef}/>
       <Timeline sectionref={TimelineRef}/>
       <Sponsors sectionref={SponsorRef}/>
-      <Join sectionref={JoinRef}/>
+      <Join sectionref={ContactRef}/>
       <footer></footer>
     </>
   )
@@ -67,7 +77,7 @@ function NavBar({scrollTo}: navProps){
       <li onClick={() => scrollTo("prizes")}>Prizes</li>
       <li onClick={() => scrollTo("timeline")}>Timeline</li>
       <li onClick={() => scrollTo("sponsors")}>Sponsors</li>
-      <li onClick={() => scrollTo("join")}>Join Us?</li>
+      <li onClick={() => scrollTo("contact")}>contact</li>
     </ol>
   </nav>
   )
