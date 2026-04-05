@@ -49,7 +49,7 @@ export default function App(){
         style={{backgroundImage: bg}}>
         <NavBar scrollTo={scrollTo}/>
         <div className="signup-btn">
-          <a href="Somejoin" target="_blank">Sign up</a>
+          <a href="https://forms.gle/RUBfDNYyRdPpM8Ct8" target="_blank">Sign up</a>
         </div>
       </animated.div>
       <Hero sectionref={HeroRef}/>
