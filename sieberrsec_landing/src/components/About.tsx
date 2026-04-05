@@ -9,7 +9,7 @@ export default function About({sectionref}:sectionProps){
         <section className="section about" ref={sectionref}>
             <h1>What is SCTF?</h1>
             <div className="flow">
-                <p>Lorem ipsum elit esse officia ipsum anim cillum mollit officia exercitation cupidatat esse quis mollit reprehenderit veniam esse dolor veniam ipsum laboris magna occaecat ullamco deserunt cillum cillum in non eiusmod quis elit cupidatat dolore laboris ad cillum dolor reprehenderit mollit minim duis fugiat deserunt veniam magna fugiat proident quis.</p>
+                <p>Now in its seventh edition, Sieberrsec CTF (SCTF) is a cybersecurity competition for secondary school and pre-university students. With a focus on making technical cybersecurity skills more accessible to our youths, SCTF strives to create a high-quality competition, alongside a conducive learning environment through the implementation of training resources and support for participants besides the competition itself.</p>
             </div>
         </section>
     )
